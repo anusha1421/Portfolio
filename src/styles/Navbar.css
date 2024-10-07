@@ -1,0 +1,88 @@
+/* styles/Navbar.css */
+
+.nav {
+    background-color: #333; /* Dark background color */
+    position: fixed; /* Sticks the navbar to the top */
+    width: 100%; /* Full width */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other elements */
+    padding: 10px 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.nav__content {
+    display: flex;
+    justify-content: space-between; /* Spreads items across */
+    align-items: center;
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the navbar */
+  
+
+}
+
+.logo a {
+    color:  #9333ea;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none; /* Removes default bullet points */
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    color:  #9333ea;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+ul li a:hover {
+    background-color: #575757; /* Change on hover */
+    border-radius: 5px;
+}
+
+/* Styles for mobile navigation menu */
+.checkbox {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* For mobile screens */
+    .checkbox {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__content ul {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        display: none;
+        flex-direction: column; /* Stacks menu items vertically */
+        width: 200px;
+        border-radius: 8px;
+    }
+
+    .nav__content ul.show {
+        display: flex;
+    }
+
+    .nav__content ul li {
+        margin: 10px 0;
+    }
+
+    #check:checked ~ ul {
+        display: flex;
+    }
+}
