@@ -32,7 +32,7 @@ function Home() {
 
           <div className="action__btns">
             {/* Hire Me button with email functionality */}
-            <button className="hire__me" onClick={handleHireMe}>Hire Me</button>
+            <button className="hire__me" onClick={handleHireMe}>Get in Touch</button>
             {/* Download Resume button with download functionality */}
             <button className="portfolio" onClick={handleDownloadResume}>Download Resume</button>
           </div>
