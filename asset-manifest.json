@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.878c76ae.css",
-    "main.js": "/Portfolio/static/js/main.9b4b4f8e.js",
+    "main.css": "/Portfolio/static/css/main.0798ac10.css",
+    "main.js": "/Portfolio/static/js/main.9ffbd4f2.js",
     "static/js/453.5164f16b.chunk.js": "/Portfolio/static/js/453.5164f16b.chunk.js",
     "static/media/hackerRank Challenge HackerRank_page-0001.jpg": "/Portfolio/static/media/hackerRank Challenge HackerRank_page-0001.d6d97a2f9155a8bc12fe.jpg",
     "static/media/skill india(cyber security)_page-0001.jpg": "/Portfolio/static/media/skill india(cyber security)_page-0001.6e21b0ce936f3d965700.jpg",
@@ -21,12 +21,12 @@
     "static/media/11.jpg": "/Portfolio/static/media/11.d8a2790a892e556d31e1.jpg",
     "static/media/cloud-core.png": "/Portfolio/static/media/cloud-core.2068079fdd69109540b1.png",
     "index.html": "/Portfolio/index.html",
-    "main.878c76ae.css.map": "/Portfolio/static/css/main.878c76ae.css.map",
-    "main.9b4b4f8e.js.map": "/Portfolio/static/js/main.9b4b4f8e.js.map",
+    "main.0798ac10.css.map": "/Portfolio/static/css/main.0798ac10.css.map",
+    "main.9ffbd4f2.js.map": "/Portfolio/static/js/main.9ffbd4f2.js.map",
     "453.5164f16b.chunk.js.map": "/Portfolio/static/js/453.5164f16b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.878c76ae.css",
-    "static/js/main.9b4b4f8e.js"
+    "static/css/main.0798ac10.css",
+    "static/js/main.9ffbd4f2.js"
   ]
 }
