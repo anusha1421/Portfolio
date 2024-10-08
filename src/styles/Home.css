@@ -27,7 +27,7 @@ body {
  background-color:  #d7f1e4; 
   display: flex; /* Flexbox layout */
   align-items: center; /* Center content vertically */
-  position: absolute; /* Add this line */
+ 
   top: 0; /* Position at the top */
   left: 0; /* Position at the left */
   width: 100%; /* Make it full width */
