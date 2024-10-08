@@ -3,7 +3,7 @@ import '../styles/Experience.css';
 import Octnet from '../assets/octnet.jpg';
 import Internship from '../assets/Internship.jpg';
 import InternshipImage2 from '../assets/intern-train.jpg'; // Path to the second image
-import Techciti  from '../assets/anusha.sj-techciti_page-0001.jpg';
+import Techciti from '../assets/anusha.sj-techciti_page-0001.jpg';
 import Codesoft from '../assets/Anusha SJ-1_page-0001.jpg';
 import Python from '../assets/python-for-data-science.png';
 import Aws from '../assets/aws.jpg';
@@ -14,6 +14,7 @@ import Jpmargon from '../assets/XiuvjcwqWRqH9oy38_JPMorgan Chase & Co._D23xLJSsW
 import Cybersecurity from '../assets/skill india(cyber security)_page-0001.jpg';
 import Java from '../assets/hackerRank Challenge HackerRank_page-0001.jpg';
 import Cloud from '../assets/cloud-core.png';
+
 const experiences = [
   {
     title: 'Java Programming Intern at CodSoft',
@@ -22,6 +23,7 @@ const experiences = [
     icon: 'fa-solid fa-code',
     certImage: Codesoft,
     link: 'https://github.com/anusha1421/CodeSoft',
+    click: 'View the certificate',
   },
   {
     title: 'Artificial Intelligence Intern and training at Internship Studio',
@@ -78,77 +80,82 @@ const certifications = [
     certImage: Powerbi,
   },
   {
-    title: 'Cybersecurity ',
+    title: 'Cybersecurity',
     date: 'March 2024',
-    description: 'Tech Mahindra Foundation through Skill, India',
-    icon: 'fa-solid fa-chart-bar',
+    description: 'Tech Mahindra Foundation through Skill India',
+    icon: 'fa-solid fa-shield-alt',
     certImage: Cybersecurity,
   },
   {
-    title: 'ReactJS for Beginners ',
+    title: 'ReactJS for Beginners',
     date: 'April 2024',
     description: 'Learned ReactJS basics from Simplilearn.',
-    icon: 'fa-solid fa-chart-bar',
+    icon: 'fa-solid fa-code',
     certImage: Reacts,
   },
   {
-    title: 'Excel Skills Job Simulation ',
+    title: 'Excel Skills Job Simulation',
     date: 'March 2024',
-    description: 'Learned Excel Skills Job Simulation from JPMorgan Chase & Co. ',
+    description: 'Learned Excel Skills Job Simulation from JPMorgan Chase & Co.',
     icon: 'fa-solid fa-chart-bar',
     certImage: Jpmargon,
   },
   {
     title: 'Cloud Core',
     date: 'July 2024',
-    description: 'Learned Cloud Core  with practical  from IBM Cognitive Class',
-    icon: 'fa-solid fa-chart-bar',
+    description: 'Learned Cloud Core with practical applications from IBM Cognitive Class',
+    icon: 'fa-solid fa-cloud',
     certImage: Cloud,
   },
   {
-    title: 'Java ',
-    date: 'Jan2024',
+    title: 'Java',
+    date: 'Jan 2024',
     description: 'Learned Java from HackerRank',
-    icon: 'fa-solid fa-chart-bar',
+    icon: 'fa-solid fa-code',
     certImage: Java,
   },
-  // Add more certifications here...
 ];
 
 const Experience = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [hoveredCertIndex, setHoveredCertIndex] = useState(null);
+  const [showCertImage, setShowCertImage] = useState(null);
+
+  const handleCertClick = (index) => {
+    setShowCertImage(index === showCertImage ? null : index); // Toggle the clicked certificate
+  };
 
   return (
     <div className="experience-container">
       <h2>Internships</h2>
       <div className="experience-row">
         {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="experience-item"
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
+          <div key={index} className="experience-item">
             <div className="icon-container">
               <i className={exp.icon}></i>
-              {hoveredIndex === index && exp.certImages ? (
-                <div className="cert-image-container">
-                  {exp.certImages.map((image, imgIndex) => (
-                    <img key={imgIndex} src={image} alt="Certificate" className="cert-image" />
-                  ))}
-                </div>
-              ) : (
-                hoveredIndex === index && (
+              {showCertImage === index ? (
+                exp.certImages ? (
+                  <div className="cert-image-container">
+                    {exp.certImages.map((image, imgIndex) => (
+                      <img key={imgIndex} src={image} alt="Certificate" className="cert-image" />
+                    ))}
+                  </div>
+                ) : (
                   <img src={exp.certImage} alt="Certificate" className="cert-image" />
                 )
+              ) : (
+                <button onClick={() => handleCertClick(index)}>Click Me</button>
               )}
             </div>
             <div className="experience-details">
               <h3>{exp.title}</h3>
               <p>{exp.date}</p>
               <p>{exp.description}</p>
-              {exp.link && <a href={exp.link} target="_blank" rel="noopener noreferrer">View Project</a>}
+              {exp.link && (
+                <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                  View Project
+                </a>
+              )}
             </div>
           </div>
         ))}
@@ -157,16 +164,13 @@ const Experience = () => {
       <h2>Certifications</h2>
       <div className="experience-row">
         {certifications.map((cert, index) => (
-          <div
-            key={index}
-            className="experience-item"
-            onMouseEnter={() => setHoveredCertIndex(index)}
-            onMouseLeave={() => setHoveredCertIndex(null)}
-          >
+          <div key={index} className="experience-item">
             <div className="icon-container">
               <i className={cert.icon}></i>
-              {hoveredCertIndex === index && (
+              {showCertImage === index ? (
                 <img src={cert.certImage} alt="Certificate" className="cert-image" />
+              ) : (
+                <button onClick={() => handleCertClick(index)}>Click Me</button>
               )}
             </div>
             <div className="experience-details">

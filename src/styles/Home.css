@@ -2,8 +2,8 @@
   --primary-color: #a855f7;
   --primary-color-dark: #9333ea;
   --secondary-color: #ca8a04;
-  --text-dark: #697e9b;
-  --text-light: #6b7280;
+  --text-dark: #071d3d;
+  --text-light: #00efd3;
   --extra-light: #ffffff;
   --max-width: 1200px;
 }
@@ -25,7 +25,7 @@ body {
 
 .section {
   min-height: 100vh; /* Ensure the section covers full viewport height */
-  background-color: #f0f0f0; /* Set your desired background color */
+  background-color: #955f0f; 
   display: flex; /* Flexbox layout */
   align-items: center; /* Center content vertically */
   position: absolute; /* Add this line */
